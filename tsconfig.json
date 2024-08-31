@@ -15,5 +15,5 @@
     },
     "types": ["jest"],
     "include": ["src", "playground.ts"],
-    "exclude": ["node_modules", "src/__tests__"]
+    "exclude": ["node_modules", "src/__tests__", "src/__integration__"]
 }

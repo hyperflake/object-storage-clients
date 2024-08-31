@@ -39,6 +39,7 @@
         "@types/node": "^20.12.12",
         "@types/node-schedule": "^2.1.7",
         "@types/sinon": "^17.0.3",
+        "axios-mock-adapter": "^2.0.0",
         "jest": "^29.7.0",
         "nodemon": "^3.1.4",
         "sinon": "^18.0.0",
