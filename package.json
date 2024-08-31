@@ -19,6 +19,8 @@
     "scripts": {
         "dev": "nodemon playground.ts",
         "build": "npx tsc --p ./tsconfig.build.json",
+        "test": "jest --detectOpenHandles",
+        "test:watch": "jest --detectOpenHandles --watch",
         "prepublishOnly": "npm run build",
         "npmPublish": "npm publish --access public"
     },
@@ -33,9 +35,14 @@
     ],
     "license": "ISC",
     "devDependencies": {
+        "@types/jest": "^29.5.12",
         "@types/node": "^20.12.12",
         "@types/node-schedule": "^2.1.7",
+        "@types/sinon": "^17.0.3",
+        "jest": "^29.7.0",
         "nodemon": "^3.1.4",
+        "sinon": "^18.0.0",
+        "ts-jest": "^29.2.5",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5"
     },
