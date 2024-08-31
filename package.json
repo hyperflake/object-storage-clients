@@ -1,0 +1,49 @@
+{
+    "name": "@hyperflake/storage-client",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Khan Cirhan",
+    "types": "build/src/index.d.ts",
+    "files": [
+        "*.md",
+        "build"
+    ],
+    "exports": {
+        ".": "./build/src/index.js",
+        "./aws": "./build/src/aws/index.js",
+        "./azure": "./build/src/azure/index.js",
+        "./dropbox": "./build/src/dropbox/index.js",
+        "./ftp": "./build/src/ftp/index.js",
+        "./oci": "./build/src/oci/index.js"
+    },
+    "scripts": {
+        "dev": "nodemon playground.ts",
+        "build": "npx tsc --p ./tsconfig.build.json",
+        "prepublishOnly": "npm run build",
+        "npmPublish": "npm publish --access public"
+    },
+    "keywords": [
+        "nodejs",
+        "object storages",
+        "aws s3",
+        "oci",
+        "azure",
+        "dropbox",
+        "ftp"
+    ],
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.12.12",
+        "@types/node-schedule": "^2.1.7",
+        "nodemon": "^3.1.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.637.0",
+        "@azure/storage-blob": "^12.24.0",
+        "axios": "^1.7.6",
+        "basic-ftp": "^5.0.5",
+        "node-schedule": "^2.1.1"
+    }
+}
