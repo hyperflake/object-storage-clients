@@ -22,7 +22,8 @@ export class OciStorageClient implements StorageClient {
     private s3: S3Client;
 
     constructor(options: OciStorageClientOptions) {
-        const endpoint = `https://${options.namespace}.compat.ObjectStorageClient.${options.region}.oraclecloud.com/`;
+        const endpoint = `https://${options.namespace}.compat.objectstorage.${options.region}.oraclecloud.com/`;
+
         this.s3 = new S3Client({
             region: options.region,
             credentials: options.credentials,
